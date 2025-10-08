@@ -1,0 +1,8 @@
+# Histogram
+plt.figure(figsize=(6, 4))
+plt.hist(df_cleaned['sepal length (cm)'], bins=15, edgecolor='black', color='skyblue')
+plt.title('Sepal Length Distribution')
+plt.xlabel('Sepal Length (cm)')
+plt.ylabel('Frequency')
+plt.tight_layout()
+plt.show()
