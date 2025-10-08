@@ -1,0 +1,20 @@
+# Load Iris dataset from sklearn
+try:
+    iris = load_iris(as_frame=True)
+    df = iris.frame
+    df['species'] = df['target'].map(dict(zip(range(3), iris.target_names)))  # Add species names
+except Exception as e:
+    print(f"Failed to load dataset: {e}")
+    df = pd.DataFrame()  # fallback to empty DataFrame
+
+# View first few rows
+print("First 5 Rows:\n", df.head())
+
+# Check data types
+print("\nData Types:\n", df.dtypes)
+
+# Check for missing values
+print("\nMissing Values:\n", df.isnull().sum())
+
+# Clean missing values (none in this dataset, but we'll show example)
+df_cleaned = df.dropna()
