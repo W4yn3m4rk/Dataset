@@ -1,0 +1,14 @@
+# Describe statistics
+print("\nSummary Statistics:\n", df_cleaned.describe())
+
+# Group by species and calculate mean
+group_means = df_cleaned.groupby('species').mean(numeric_only=True)
+print("\nAverage measurements per species:\n", group_means)
+
+# Observations
+"""
+Findings:
+- Virginica has the longest petals and sepals on average.
+- Setosa has the shortest features.
+- Petal width is a strong differentiator between species.
+"""
