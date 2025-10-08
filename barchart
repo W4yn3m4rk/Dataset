@@ -1,0 +1,8 @@
+# Bar plot: Avg petal length per species
+plt.figure(figsize=(6, 4))
+sns.barplot(x=group_means.index, y=group_means['petal length (cm)'])
+plt.title('Average Petal Length per Species')
+plt.xlabel('Species')
+plt.ylabel('Petal Length (cm)')
+plt.tight_layout()
+plt.show()
