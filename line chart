@@ -1,0 +1,9 @@
+# Simulated trend: petal length over index
+plt.figure(figsize=(8, 4))
+plt.plot(df_cleaned.index, df_cleaned['petal length (cm)'], label='Petal Length')
+plt.title('Simulated Petal Length Trend Over Time')
+plt.xlabel('Index (Simulated Time)')
+plt.ylabel('Petal Length (cm)')
+plt.legend()
+plt.tight_layout()
+plt.show()
