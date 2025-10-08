@@ -1,0 +1,14 @@
+# Scatter plot
+plt.figure(figsize=(6, 5))
+sns.scatterplot(
+    data=df_cleaned,
+    x='sepal length (cm)',
+    y='petal length (cm)',
+    hue='species',
+    palette='deep'
+)
+plt.title('Sepal vs Petal Length')
+plt.xlabel('Sepal Length (cm)')
+plt.ylabel('Petal Length (cm)')
+plt.tight_layout()
+plt.show()
